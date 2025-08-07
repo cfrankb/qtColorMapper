@@ -1,0 +1,3 @@
+src/build/*
+src/backup/*
+**.pro.user
