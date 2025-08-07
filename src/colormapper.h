@@ -6,12 +6,11 @@
 #include <QVBoxLayout>
 #include <QWidget>
 
-
-
 class CustomWidget;
 class CFrameSet;
 
-class ColorMapperWindow : public QMainWindow {
+class ColorMapperWindow : public QMainWindow
+{
     Q_OBJECT
 
 public:
@@ -28,14 +27,15 @@ private slots:
 
 private:
     QTableWidget *table;
-    CustomWidget* m_tab2;
+    CustomWidget *m_tab2;
     CFrameSet *m_frameSet;
 
     void populateColors(const QMap<QString, QString> &map);
     bool extractColors(const QString &filename);
-    void makeColorMap(std::unordered_map<uint32_t, uint32_t>&map);
+    void makeColorMap(std::unordered_map<uint32_t, uint32_t> &map);
     uint32_t swapRxB(const uint32_t color);
-    enum {
+    enum
+    {
         ALPHA = 0xff000000
     };
 };

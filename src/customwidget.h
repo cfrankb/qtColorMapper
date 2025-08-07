@@ -8,7 +8,8 @@
 
 class CFrameSet;
 
-class CustomWidget : public QWidget {
+class CustomWidget : public QWidget
+{
     Q_OBJECT
 
 public:
@@ -22,7 +23,6 @@ private:
     void paintEvent(QPaintEvent *) override;
     CFrameSet *m_frameSet;
     std::unordered_map<uint32_t, uint32_t> m_colors;
-
 };
 
 #endif // CUSTOMWIDGET_H
